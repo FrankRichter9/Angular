@@ -1,0 +1,18 @@
+<div class="">
+    <ul>
+<li class="sensor" *ngFor="let sensor of sensorsArray; let in = index"
+ [style.background-color]="sensor.status ? 'lightgreen' : 'pink'"
+>
+    <h4><b>id:</b>  {{sensor.id}}</h4>
+    <h4><b>name:</b>  {{sensor.name}}</h4>
+    <button class="btn btn-danger" (click)="deleteSensor(in)">x</button>
+</li>
+</ul>
+    <form class="form-group" (submit)="addSensor(name.value, status.checked)">
+        <label for="add"></label>
+        <input type="text" id="add" placeholder="write name" class="form-control" #name>
+        <label for="add">Вкл<input type="radio" name="sensorStatus" value="true" #status checked></label>
+        <label for="add">Выкл<input type="radio" name="sensorStatus" value="false" ></label>
+        <button class="btn btn-outline-success">ADD</button>
+    </form>
+</div>
