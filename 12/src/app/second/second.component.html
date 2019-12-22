@@ -1,0 +1,5 @@
+<button (click)='onEdit()'>Редактировать</button>
+<div *ngIf=edit>
+    <input type="name" [(ngModel)]="person.firstname">
+    <input type="surname" [(ngModel)]="person.lastname">
+</div>
