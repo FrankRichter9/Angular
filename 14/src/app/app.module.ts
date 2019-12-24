@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -11,6 +10,8 @@ import { PersonAddComponent } from './person-add/person-add.component';
 
 import { TextMaskModule } from 'angular2-text-mask';
 import { PipePipe } from './pipes/pipe.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpComponent } from './http/http.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { PipePipe } from './pipes/pipe.pipe';
     SecondComponent,
     PersonViewComponent,
     PersonAddComponent,
-    PipePipe
+    PipePipe,
+    HttpComponent
     
   ],
   imports: [
