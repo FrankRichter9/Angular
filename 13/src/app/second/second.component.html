@@ -1,0 +1,6 @@
+<button (click)='onEdit()'>Редактировать</button>
+<div *ngIf=edit>
+    <input type="name" [(ngModel)]="person.firstname">
+    <input type="surname" [(ngModel)]="person.lastname">
+    <input type="surname" [textMask]="{mask: mask}" [(ngModel)]="person.phone">
+</div>
