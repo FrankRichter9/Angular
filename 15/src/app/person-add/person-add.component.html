@@ -1,0 +1,27 @@
+<form class="container" [formGroup]="fullNameControl" (submit)="onFormSubmit()"> 
+    <div class="row">
+        <div class="col-12">
+            <input type="text" class="form-control" placeholder="Имя" 
+            formControlName="firstname"
+            #inputFirstname>
+        </div>
+        <div class="col-12 mt-2">
+            <input type="text" class="form-control" placeholder="Фамилия" 
+            formControlName="lastname"
+            #inputLastname>
+        </div>
+        <div class="col-12 mt-2">
+            <input type="text" class="form-control" placeholder="Телефон" 
+            formControlName="phone"
+            [textMask]="{mask: mask}"
+            #inputPhone>
+        </div>
+        <div class="col-12 mt-2">
+            <button class="btn btn-primary"
+                [disabled]="fullNameControl.invalid"
+                
+                >
+                Сохранить</button>
+        </div>
+    </div>
+</form>
